@@ -1,92 +1,70 @@
-Design Document: Healthcare Portal (MERN Stack)
+# Getting Started with Create React App
 
-Project Name: HealthConnect Portal
-Version: 1.0
-Prepared By: sheethal
-Date: 9-11-2025
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Available Scripts
 
-Project Overview
+In the project directory, you can run:
 
-Objective:
-Develop a web-based healthcare portal where patients can book appointments, view medical records, communicate with healthcare providers, and providers can manage schedules, patient records, and consultations.
+### `npm start`
 
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-Users:
-Patients: View records, book appointments, receive notifications, chat with providers.
-Providers (Doctors, Nurses, Administrators): Manage appointments, patient history, prescriptions, and messages.
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-Platform: Web-based application, mobile-responsive.
+### `npm test`
 
-Tech-stacks:- 
-Frontend: React.js (with Context API), Tailwind CSS 
-Backend: Node.js, Express.js
-Database: MongoDB
-Authentication: JWT-based, role-based access control
-Deployment:  Nginx, PM2 (for process management) and aws, mongodb 
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-Optional: WebSockets for real-time chat/notifications
+### `npm run build`
 
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-2. Functional Requirements
-2.1 Patient Features
-Registration & login
-View and edit profile
-Search for healthcare providers
-Book, reschedule, or cancel appointments
-Access medical history, lab results, prescriptions
-Receive notifications (email, in-app)
-Chat with providers (optional real-time chat)
-Rate/review providers
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-2.2 Provider Features
-Registration & login (verification required)
-Manage profile, availability, and services
-View patient list and medical history
-Accept or decline appointments
-Prescribe medications and add notes
-View analytics (number of patients, appointments, etc.)
-Messaging with patients
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-2.3 Admin Features
-Manage users (patients and providers)
-Moderate content (reviews, messages)
-Generate reports
-Analytics dashboard
+### `npm run eject`
 
-3. Non-Functional Requirements
-Performance: Fast response time (<2 seconds for main operations)
-Scalability: Handle 10,000+ concurrent users
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-Security:
-JWT authentication with refresh tokens
-HTTPS/TLS encryption
-Role-based access control
-Sensitive data encrypted in MongoDB
-Availability: 99.9% uptime using PM2 clustering,nginx and mongodb replication
-Maintainability: Modular codebase (routes, controllers, services, models)
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-4. Architecture Design
-4.1 High-Level Architecture
-[React Frontend] <--> [Node/Express API] <--> [MongoDB]
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-Components:
-Frontend: React SPA, React Router, context Api for state management
-Backend: RESTful APIs with Express, JWT authentication, controllers for patients/providers/admin
+## Learn More
 
-Database: MongoDB collections:
-Users (patients),
-providers (doctors , nurses , admins)
-Appointments,
-MedicalRecords,
-Messages,
-Notifications,
-Prescriptions,
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-4.2 Data Flow
-User sends a request via frontend.
-Request hits Express API routes.
-Middleware validates JWT and permissions.
-Controller interacts with MongoDB using Mongoose.
-Response sent back to frontend.
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
